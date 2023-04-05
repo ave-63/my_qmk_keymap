@@ -23,11 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define USE_I2C
 
 #define PREVENT_STUCK_MODIFIERS
-#define TAPPING_TERM 180
+#define TAPPING_TERM 200
 
 /* Select hand configuration */
 //#define MASTER_LEFT
-#define MASTER_RIGHT
+#define MASTER_LEFT
 // #define EE_HANDS
 
 /*#undef RGBLED_NUMvbvbvbvbvbvbvtesting

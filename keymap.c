@@ -17,6 +17,8 @@ extern keymap_config_t keymap_config;
 
 enum my_layers {
   _QWERTY,
+  _GAME,
+  _GAME2,
   _SYMBOL,
   _COMMAND,
   _LCAG
@@ -39,6 +41,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_LCTL, KC_A,    KC_S,     KC_D,    KC_F,    KC_G,                          KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, MO(_SYMBOL),
    KC_LALT, KC_Z,    KC_X,     KC_C,    KC_V,    KC_B, KC_NO,            KC_NO, KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_MQTE,
                                  MO(_LCAG),  KC_LSFT, MO(_COMMAND),            MT(MOD_LGUI, KC_ENT),  KC_SPC, KC_RSFT
+),
+[_GAME] = LAYOUT(
+   KC_ESC,  KC_1,  KC_2, KC_3,   KC_4, KC_5,                     TG(_GAME), KC_LGUI, KC_MBRC, KC_RBRC,   KC_NO,  KC_DEL,
+   KC_TAB,  KC_Q,    KC_W,     KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
+   KC_LCTL, KC_A,    KC_S,     KC_D,    KC_F,    KC_G,                          KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, MO(_SYMBOL),
+   KC_LALT, KC_Z,    KC_X,     KC_C,    KC_V,    KC_B, KC_NO,            KC_NO, KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_MQTE,
+                            MO(_LCAG),  KC_SPC, MO(_GAME2),            MT(MOD_LGUI, KC_ENT),  KC_SPC, KC_RSFT
+),
+[_GAME2] = LAYOUT(
+   KC_TRNS, KC_6, KC_7, KC_8, KC_9, KC_0,                                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
+                              KC_TRNS, KC_TRNS, KC_TRNS,                    KC_TRNS, KC_TRNS, KC_TRNS 
 ),
 [_SYMBOL] = LAYOUT(
    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, 
